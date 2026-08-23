@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Tests and quality tools
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Operating systems
+.DS_Store
+Thumbs.db
+
+# Runtime data
+data/raw/*
+!data/raw/.gitkeep
+
+data/index/*
+!data/index/.gitkeep
+
+data/structured/*
+!data/structured/.gitkeep
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs and temporary files
+*.log
+tmp/

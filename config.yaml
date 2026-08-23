@@ -1,0 +1,32 @@
+project:
+  name: "France Messagerie RAG Demo"
+
+paths:
+  documents_dir: "data/raw"
+  index_dir: "data/index"
+  chunks_file: "data/index/chunks.json"
+  embeddings_file: "data/index/embeddings.npy"
+
+ollama:
+  base_url: "http://localhost:11434"
+  chat_model: "mistral:7b"
+  embedding_model: "nomic-embed-text"
+  timeout_seconds: 120
+
+pdf:
+  minimum_text_length: 20
+
+chunking:
+  chunk_size: 1200
+  chunk_overlap: 200
+
+retrieval:
+  mode: "hybrid"
+  top_k_dense: 8
+  top_k_bm25: 8
+  final_top_k: 4
+
+generation:
+  temperature: 0.0
+  require_sources: true
+  allow_abstention: true
